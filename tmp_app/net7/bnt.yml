@@ -1,0 +1,105 @@
+parameters:
+  - name: solution
+    type: string
+  - name: buildPlatform
+    type: string
+    default: Any CPU
+  - name: buildConfiguration
+    type: string
+    default: Release
+  - name: coverageFolder
+    type: string
+    default: $(Agent.BuildDirectory)\coverage
+  - name: createZip
+    type: boolean
+    default: false
+  - name: minCoverage
+    type: number
+    default: 70
+  - name: nodeVersion
+    type: string
+    default: 15.x
+  - name: testExclude
+    type: string
+    default: ""
+  - name: skipTests
+    type: boolean
+    default: false
+  - name: code_coverage_report_filter
+    type: string
+    default: "+*"
+    
+steps:
+  - task: NuGetToolInstaller@1
+    displayName: NuGet Install
+  - task: CmdLine@2
+    displayName: Create directories
+    inputs:
+      script: |
+        mkdir $(Agent.BuildDirectory)\testresults
+        mkdir ${{parameters.coverageFolder}}
+        dir
+
+  - task: DotNetCoreCLI@2
+    displayName: Restore
+    inputs:
+      command: restore
+      projects: ${{ parameters.solution }}
+      feedsToUse: "select"
+      includeNuGetOrg: false
+      restoreArguments: "--interactive"
+      vstsFeed: "8bacc871-4855-4450-9cdf-1bcc470589ff/fee87882-3556-4709-a4e4-0a15f30e04b8"
+  - task: DotNetCoreCLI@2
+    displayName: Build
+    inputs:
+      command: build
+      projects: ${{ parameters.solution }}
+      configuration: ${{ parameters.buildConfiguration }}
+      ${{ if eq(parameters.createZip, false) }}:
+        arguments: "--no-restore"
+      ${{ if eq(parameters.createZip, true) }}:
+        arguments: "--no-restore -o funcOutput"
+        zipAfterPublish: true
+  - ${{ if eq(parameters.skipTests, false) }}:
+    - task: DotNetCoreCLI@2
+      displayName: Test
+      inputs:
+        command: test
+        arguments: >-
+          ${{ parameters.solution }} --no-restore --no-build
+          /p:CollectCoverage=true
+          /p:Threshold=${{ parameters.minCoverage }}
+          /p:ThresholdType=line
+          /p:Exclude="${{ parameters.testExclude }}"
+          /p:ThresholdStat=total
+          /p:CoverletOutputFormat="\"json,opencover,cobertura\""
+          /p:MergeWith=$(Agent.BuildDirectory)\testresults\coverage.json
+          -m:1
+#           /p:CoverletOutput=$(Agent.BuildDirectory)/TestResults/Coverage/
+        configuration: ${{ parameters.buildConfiguration }}
+    
+    - task: Palmmedia.reportgenerator.reportgenerator-build-release-task.reportgenerator@5
+      displayName: ReportGenerator
+      inputs:
+        reports: '**/coverage.cobertura.xml'
+        targetdir: ${{parameters.coverageFolder}}
+        reporttypes: "HtmlInline_AzurePipelines;Cobertura;Badges"
+        assemblyfilters: "-xunit*"
+        filefilters: "${{ parameters.code_coverage_report_filter }}"
+    
+    - task: PowerShell@2
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo '##vso[task.setvariable variable=DISABLE_COVERAGE_AUTOGENERATE]true'
+          cd ${{parameters.coverageFolder}}
+          dir
+
+    - task: PublishCodeCoverageResults@1
+      displayName: "Publish coverage report"
+      inputs:
+        codeCoverageTool: 'Cobertura'
+        reportDirectory: '${{parameters.coverageFolder}}'
+        summaryFileLocation: '${{parameters.coverageFolder}}\Cobertura.xml'
+        pathToSources: '$(Agent.BuildDirectory)\s'
+  
