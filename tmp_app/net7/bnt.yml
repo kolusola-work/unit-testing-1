@@ -48,7 +48,7 @@ steps:
       feedsToUse: "select"
       includeNuGetOrg: false
       restoreArguments: "--interactive"
-      vstsFeed: "8bacc871-4855-4450-9cdf-1bcc470589ff/fee87882-3556-4709-a4e4-0a15f30e04b8"
+      vstsFeed: "REPLACE TASK"
   - task: DotNetCoreCLI@2
     displayName: Build
     inputs:
