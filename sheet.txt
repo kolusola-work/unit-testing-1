@@ -1,0 +1,59 @@
+8f02e291165a4abcab4058d0a1ea17a5.azurecr.io/azureml/azureml_5dbc8876083a75d746da09136bd3b368:latest: resolved       |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+manifest-sha256:4e9bb397fad17c6b54dbfac25dfd6b4ba66d5a8d80536ca2663075c1d9ef8f17:                    done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:a7c9327fe44ac891da9adde71218edb7738a43a065df56d3ddcd46ce9860dc8a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:38521da1e13bf760fe85506ec10aac3db482124526a0c6440457c16e1bf9b467:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:01c69afbe599d9107b723759c3c0b1443f33e780aa0b753e30e912a7824a3e36:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+config-sha256:8ac638bea73dc616f14c81c67354a6ec874caec35c0e207e582170b274a9b288:                      done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:97bfe6231c390c70d9166aa8bb2523f47ac661b3559b2ace77736e426b4b7ba9:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:d433a81f70e360167886e44dde9af3ab7e77bd65ceec9063e49ef2c0b534809f:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:a0f1c015153b836ce65d0131d122de5d51d665b01831a4ed1e254d01c9fde9f3:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:560c024910bebac6b404791af28ebd48a8289303b8377d17b67ffdfe52754f2a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:3b1987910610568721a1f7a02dce1ed37f479d7ba6a619ff9254b0ee8de0109a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:510c454ee6b62aa13d9c273d0095147e745eddb1d445434645d80797a01e258c:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:d087c15fca2dec9344c63926722906a375f2caa098efe14e3ec63d8812410b03:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:8185149f39b5572a2dfa45768ea45e0be441962035dcf9551020e3d26b04dc02:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:cba7cfa5f2c43270815eb492fa181513bd2f796ce4bc914657c200944bfed265:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+elapsed: 6.8 s                                                                                       total:  572.4  (84.2 MiB/s)                                      
+8f02e291165a4abcab4058d0a1ea17a5.azurecr.io/azureml/azureml_5dbc8876083a75d746da09136bd3b368:latest: resolved       |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+manifest-sha256:4e9bb397fad17c6b54dbfac25dfd6b4ba66d5a8d80536ca2663075c1d9ef8f17:                    done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:a7c9327fe44ac891da9adde71218edb7738a43a065df56d3ddcd46ce9860dc8a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:38521da1e13bf760fe85506ec10aac3db482124526a0c6440457c16e1bf9b467:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:01c69afbe599d9107b723759c3c0b1443f33e780aa0b753e30e912a7824a3e36:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+config-sha256:8ac638bea73dc616f14c81c67354a6ec874caec35c0e207e582170b274a9b288:                      done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:97bfe6231c390c70d9166aa8bb2523f47ac661b3559b2ace77736e426b4b7ba9:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:d433a81f70e360167886e44dde9af3ab7e77bd65ceec9063e49ef2c0b534809f:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:a0f1c015153b836ce65d0131d122de5d51d665b01831a4ed1e254d01c9fde9f3:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:560c024910bebac6b404791af28ebd48a8289303b8377d17b67ffdfe52754f2a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:3b1987910610568721a1f7a02dce1ed37f479d7ba6a619ff9254b0ee8de0109a:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:510c454ee6b62aa13d9c273d0095147e745eddb1d445434645d80797a01e258c:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:d087c15fca2dec9344c63926722906a375f2caa098efe14e3ec63d8812410b03:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:8185149f39b5572a2dfa45768ea45e0be441962035dcf9551020e3d26b04dc02:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+layer-sha256:cba7cfa5f2c43270815eb492fa181513bd2f796ce4bc914657c200944bfed265:                       done           |[32m++++++++++++++++++++++++++++++++++++++[0m| 
+elapsed: 6.9 s                                                                                       total:  572.4  (82.9 MiB/s)                                      
+unpacking linux/amd64 sha256:4e9bb397fad17c6b54dbfac25dfd6b4ba66d5a8d80536ca2663075c1d9ef8f17...
+done: 26.995029529s	
+{"level":"[INFO]","ts":"Sep  6 02:27:21","logger":"VMAgent.ImageFetcher","caller":"imagefetcher/image_fetcher.go:221","msg":"found 1 image with filter name==8f02e291165a4abcab4058d0a1ea17a5.azurecr.io/azureml/azureml_5dbc8876083a75d746da09136bd3b368:latest"}
+{"level":"[INFO]","ts":"Sep  6 02:27:21","logger":"VMAgent.ImageFetcher","caller":"imagefetcher/image_fetcher.go:233","msg":"found 2 image with filter target.digest==sha256:4e9bb397fad17c6b54dbfac25dfd6b4ba66d5a8d80536ca2663075c1d9ef8f17"}
+{"level":"[INFO]","ts":"Sep  6 02:27:21","logger":"VMAgent.ImageFetcher","caller":"imagefetcher/image_fetcher.go:275","msg":"Prepare to GC 0 images."}
+{"level":"[INFO]","ts":"Sep  6 02:27:21","logger":"VMAgent.main","caller":"image-fetcher/main.go:65","msg":"Imagefetcher runs successfully."}
+time="2025-09-06T02:26:47Z" level=warning msg="DEPRECATION: CRI API v1alpha2 is deprecated since containerd v1.7 and removed in containerd v2.0. Use CRI API v1 instead."
+
+======================================================================================================================================================================================================================================================================
+======================================================================================================================================================================================================================================================================
+2025-11-10 09:57:55,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:57:55 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:57:56,601 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:57:56 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:05,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:05 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:06,588 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:06 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:15,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:15 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:16,589 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:16 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:25,151 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:25 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:26,587 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:26 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:35,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:35 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:36,588 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:36 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:45,151 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:45 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:46,587 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:46 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:55,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:55 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:58:56,588 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:58:56 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:59:05,152 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:59:05 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:59:06,589 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:59:06 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
+2025-11-10 09:59:15,151 I [72] gunicorn.access - 127.0.0.1 - - [10/Nov/2025:09:59:15 +0000] "GET / HTTP/1.0" 200 7 "-" "kube-probe/1.29"
