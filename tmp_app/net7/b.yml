@@ -1,0 +1,56 @@
+# dotnet 7 Build Pipeline template
+
+parameters:
+  - name: solution
+    type: string
+  - name: buildPlatform
+    type: string
+    default: Any CPU
+  - name: buildConfiguration
+    type: string
+    default: Release
+  - name: coverageFolder
+    type: string
+    default: $(Agent.BuildDirectory)\coverage
+  - name: vstsFeed
+    type: string
+    default: "REPLACE TASK"
+  - name: createZip
+    type: string
+    default: false
+
+steps:
+  - task: UseDotNet@2
+    displayName: Use Dot Net Core 7.0.x
+    inputs:
+      packageType: "sdk"
+      version: "7.x" 
+  - task: NuGetToolInstaller@1
+    displayName: NuGet Install
+  - task: DotNetCoreCLI@2
+    displayName: Restore
+    inputs:
+      command: restore
+      projects: ${{ parameters.solution }}
+      feedsToUse: "select"
+      includeNuGetOrg: false
+      restoreArguments: "--interactive"
+      vstsFeed: ${{ parameters.vstsFeed }}
+  - task: DotNetCoreCLI@2
+    displayName: Build
+    inputs:
+      command: build
+      projects: ${{ parameters.solution }}
+      configuration: ${{ parameters.buildConfiguration }}
+      ${{ if eq(parameters.createZip, false) }}:
+        arguments: "--no-restore"
+      ${{ if eq(parameters.createZip, true) }}:
+        arguments: "--no-restore -o funcOutput"
+        zipAfterPublish: true
+  - task: PublishPipelineArtifact@1
+    inputs:
+      targetPath: "$(System.DefaultWorkingDirectory)/helm"
+      artifact: "helm"
+      publishLocation: "pipeline"
+    displayName: Publish Helm Files
+
